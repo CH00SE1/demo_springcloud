@@ -11,3 +11,7 @@ spring:
         username: nacos
         password: nacos
         namespace: public
+logging:
+  level:
+    # feign路径设置日志为dubug
+    com.order.feign: debug
