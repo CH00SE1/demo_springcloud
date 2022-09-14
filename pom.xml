@@ -5,6 +5,8 @@
     <modules>
         <module>order</module>
         <module>stock</module>
+        <module>order_nacos</module>
+        <module>stock_nacos</module>
     </modules>
 
     <parent>
