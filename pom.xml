@@ -9,6 +9,7 @@
         <module>stock_nacos</module>
         <module>order_ribbon</module>
         <module>order_loadbalancer</module>
+        <module>order_openfeign</module>
     </modules>
 
     <parent>
