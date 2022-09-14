@@ -7,6 +7,7 @@
         <module>stock</module>
         <module>order_nacos</module>
         <module>stock_nacos</module>
+        <module>order_ribbon</module>
     </modules>
 
     <parent>

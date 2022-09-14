@@ -1,9 +1,9 @@
 server:
-  port: 8098
+  port: 8100
 
 spring:
   application:
-    name: stock-service
+    name: order-ribbon
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848
@@ -11,4 +11,10 @@ spring:
         username: nacos
         password: nacos
         namespace: public
-#        ephemeral: false
+
+ribbon:
+  eager-load:
+    # 开启懒加载
+    enabled: true
+    # 指定需要加载负载均衡的服务
+    clients: stock-service
