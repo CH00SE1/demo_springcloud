@@ -6,12 +6,13 @@
         <module>order</module>
         <module>stock</module>
     </modules>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.11.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.3.2.RELEASE</version>
     </parent>
+
     <groupId>com.djwk</groupId>
     <artifactId>demo_springcloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -20,6 +21,8 @@
     <packaging>pom</packaging>
     <properties>
         <java.version>1.8</java.version>
+        <spring.cloud.alibaba.version>2.2.6.RELEASE</spring.cloud.alibaba.version>
+        <spring.cloud.version>Hoxton.SR9</spring.cloud.version>
     </properties>
     <dependencies>
         <dependency>
@@ -33,6 +36,28 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
