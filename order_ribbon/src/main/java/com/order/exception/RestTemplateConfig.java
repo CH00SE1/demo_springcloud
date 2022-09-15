@@ -1,4 +1,4 @@
-package com.order.config;
+package com.order.exception;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;

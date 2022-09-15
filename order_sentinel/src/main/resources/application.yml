@@ -1,0 +1,12 @@
+server:
+  port: 8561
+
+spring:
+  application:
+    name: order-sentinel
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8465
+      # 默认蒋调用链路收敛
+      web-context-unify: false

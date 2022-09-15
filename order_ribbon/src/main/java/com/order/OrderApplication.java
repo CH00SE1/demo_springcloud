@@ -1,6 +1,6 @@
 package com.order;
 
-import com.order.config.RibbonConfig;
+import com.order.exception.RibbonConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;

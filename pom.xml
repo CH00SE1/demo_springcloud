@@ -12,6 +12,7 @@
         <module>order_openfeign</module>
         <module>config_nacos</module>
         <module>sentinel_demo</module>
+        <module>order_sentinel</module>
     </modules>
 
     <parent>

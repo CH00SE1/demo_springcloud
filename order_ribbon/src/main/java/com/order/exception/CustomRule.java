@@ -1,4 +1,4 @@
-package com.order.config;
+package com.order.exception;
 
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.AbstractLoadBalancerRule;
