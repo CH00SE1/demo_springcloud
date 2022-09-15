@@ -11,6 +11,7 @@
         <module>order_loadbalancer</module>
         <module>order_openfeign</module>
         <module>config_nacos</module>
+        <module>sentinel_demo</module>
     </modules>
 
     <parent>
