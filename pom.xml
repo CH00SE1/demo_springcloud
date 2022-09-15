@@ -10,6 +10,7 @@
         <module>order_ribbon</module>
         <module>order_loadbalancer</module>
         <module>order_openfeign</module>
+        <module>config_nacos</module>
     </modules>
 
     <parent>

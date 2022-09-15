@@ -23,7 +23,8 @@ public class StockController {
     public String port;
 
     @GetMapping("/reduct")
-    public String add() {
+    public String add() throws InterruptedException {
+        Thread.sleep(4000);
         Calendar calendar = Calendar.getInstance();
         Date time = calendar.getTime();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");

@@ -1,5 +1,6 @@
 package com.order.feign;
 
+import com.order.config.FeignConfig;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author CHOOSE1
  * @date 2022-09-14 20:44:40
  */
-@FeignClient(name = "stock-service", path = "/stock/")
+@FeignClient(name = "stock-service", path = "/stock/", configuration = FeignConfig.class)
 public interface StockFeignService {
 
     @GetMapping("/reduct")

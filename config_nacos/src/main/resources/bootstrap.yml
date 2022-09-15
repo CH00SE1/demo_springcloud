@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-nacos
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        # 默认为Properties格式
+        file-extension: yaml
+#        namespace: prod
+        shared-configs:
+          - data_id: config-nacos
+            refresh: true
