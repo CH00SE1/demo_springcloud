@@ -1,12 +1,21 @@
 server:
-  port: 8561
+  port: 8562
 
 spring:
   application:
-    name: order-sentinel
+    name: order-sentinel_back
   cloud:
     sentinel:
       transport:
         dashboard: 127.0.0.1:8465
       # 默认蒋调用链路收敛
       web-context-unify: false
+      datasource:
+        # 自定义
+        flow-rule:
+          nacos:
+            serverAddr: 192.168.10.87:8848
+            username: nacos
+            password: nacos
+            dataId: order-sentinel-flow-rule
+            ruleType: flow

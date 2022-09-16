@@ -32,4 +32,14 @@ public class StockController {
         return stockReduct + port;
     }
 
+    @GetMapping("/reduct2")
+    public String reduct() {
+        int a = 1 / 0;
+        Calendar calendar = Calendar.getInstance();
+        Date time = calendar.getTime();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        System.out.println(stockReduct + " - " + simpleDateFormat.format(time));
+        return stockReduct + port;
+    }
+
 }

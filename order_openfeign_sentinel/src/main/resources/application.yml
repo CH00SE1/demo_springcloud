@@ -1,0 +1,24 @@
+server:
+  port: 8119
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public
+logging:
+  level:
+    # feign路径设置日志为dubug
+    com.order.feign: debug
+
+feign:
+  sentinel:
+    # openfeign对sentinel的整合
+    enabled: true
