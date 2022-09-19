@@ -14,6 +14,7 @@
         <module>sentinel_demo</module>
         <module>order_sentinel</module>
         <module>order_openfeign_sentinel</module>
+        <module>seata</module>
     </modules>
 
     <parent>

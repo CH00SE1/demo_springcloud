@@ -17,14 +17,14 @@ public class OrderController {
     @Autowired
     private RestTemplate restTemplate;
 
-    public static final String orderAdd = "下单成功";
+    public static final String ORDER_ADD = "下单成功";
 
     @GetMapping("/add")
     public String add() {
-        System.out.println(orderAdd);
+        System.out.println(ORDER_ADD);
         String msg = restTemplate.getForObject("http://localhost:8091/stock/reduct", String.class);
         System.out.println(msg);
-        return orderAdd + " - " + msg;
+        return ORDER_ADD + " - " + msg;
     }
 
 }

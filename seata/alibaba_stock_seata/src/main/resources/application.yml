@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: alibaba-stock-service
+    cloud:
+      nacos:
+        server-addr: 127.0.0.1:8848
+        discovery:
+          username: nacos
+          password: nacos
+          namespace: public
+  datasource:
+    druid:
+      statViewServlet:
+        enabled: true
+        # 设置白名单，不填则允许所有访问
+        allow:
+        url-pattern: /druid/*
+        # 控制台管理用户名和密码
+        login-username: lsx
+        login-password: 123456
+    dynamic:
+      primary: stock
+      datasource:
+        druid:
+          initialSize: 5
+          minIdle: 10
+          maxActive: 20
+          maxWait: 60000
+          timeBetweenEvictionRunsMillis: 10000
+          minEvictableIdleTimeMillis: 200000
+          maxEvictableIdleTimeMillis: 300000
+          validationQuery: SELECT 1 FROM DUAL
+          testWhileIdle: true
+          testOnBorrow: false
+          testOnReturn: false
+          webStatFilter:
+            enabled: true
+          filter:
+            stat:
+              enabled: true
+              log-slow-sql: true
+              slow-sql-millis: 1000
+              merge-sql: true
+            wall:
+              config:
+                multi-statement-allow: true
+        stock:
+          url: jdbc:mysql://192.168.10.87:3306/seata_stock?useUnicode=true&rewriteBatchedStatements=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+          username: root
+          password: 11098319
+          driverClassName: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8457
+
+logging:
+  level:
+    com.stock: debug
+    org.springframework: warn
