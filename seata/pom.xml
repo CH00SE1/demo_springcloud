@@ -14,8 +14,8 @@
     <modules>
         <module>order_seata</module>
         <module>stock_seata</module>
-        <module>alibaba_order_seata</module>
-        <module>alibaba_stock_seata</module>
+        <module>order_seata_alibaba</module>
+        <module>stock_seata_alibaba</module>
     </modules>
 
     <properties>
@@ -91,6 +91,13 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>
