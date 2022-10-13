@@ -15,6 +15,7 @@
         <module>order_sentinel</module>
         <module>order_openfeign_sentinel</module>
         <module>seata</module>
+        <module>gateway</module>
     </modules>
 
     <parent>
