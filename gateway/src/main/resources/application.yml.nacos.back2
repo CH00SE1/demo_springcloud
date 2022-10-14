@@ -1,8 +1,6 @@
-# demo_springcloud
+server:
+  port: 8963
 
-
-####自动识别nacos网关服务
-```yaml
 spring:
   application:
     name: api-gateway
@@ -19,4 +17,3 @@ spring:
         locator:
           # 是否自动识别nacos网关服务
           enabled: true
-```

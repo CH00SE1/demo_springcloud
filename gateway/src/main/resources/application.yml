@@ -13,7 +13,16 @@ spring:
         server-addr: 127.0.0.1:8848
     # gateway的配置
     gateway:
-      discovery:
-        locator:
-          # 是否自动识别nacos网关服务
-          enabled: true
+      # 路由规则
+      routes:
+        # 路由的唯一标识
+        - id: order_route
+          # 需要路由的地址
+          # uri: http://localhost:8090
+          uri: lb://order-service # lb == loadbalancer 负载均衡
+          # 断言规则 用于规则匹配
+          predicates:
+            - Path=/order/**
+            - CheckAuth=lsx
+          filters:
+            - StripPrefix=1
